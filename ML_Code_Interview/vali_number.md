@@ -96,7 +96,7 @@ def is_number(s: str) -> bool:
 
     # Return true if all characters are processed and valid
     return is_numeric and i == n
-
+```
 # Test cases
 print(is_number("0"))      # True
 print(is_number("0.1"))    # True
@@ -107,11 +107,14 @@ print(is_number("abc"))    # False
 Potential Issues and Enhancements:
 Invalid Exponential Formats: While the current solution handles most cases well, it assumes that the exponent is properly formatted (e.g., "2e10"). Additional checks might be needed to ensure that no invalid formats like "2e" or "e10" are allowed.
 
-### Edge Cases: Consider special cases like multiple decimal points ("1.2.3"), signs in the wrong place ("++1", "1e+e10"), or strings with invalid characters ("1a", "1e10.5").
+### Edge Cases: 
+Consider special cases like multiple decimal points ("1.2.3"), signs in the wrong place ("++1", "1e+e10"), or strings with invalid characters ("1a", "1e10.5").
 
-Performance Considerations: For extremely large strings, consider optimizing the string operations to reduce time complexity. However, for most practical purposes, this solution is efficient.
+### Performance Considerations:
+For extremely large strings, consider optimizing the string operations to reduce time complexity. However, for most practical purposes, this solution is efficient.
 
-Regular Expressions (Regex): Another approach could be using regular expressions to validate the format. This can make the code shorter and more expressive but might be harder to understand for beginners.
+### Regular Expressions (Regex): 
+Another approach could be using regular expressions to validate the format. This can make the code shorter and more expressive but might be harder to understand for beginners.
 
 ## Improved Solution:
 You can use regular expressions to succinctly handle all the cases in a more readable way:
